@@ -1,37 +1,45 @@
-# Completing the core modules
+# Setup
 
-The Streamlit app, LLM client, requirements, and docs are already in this repository.
+All core modules are now in this repository.
 
-The two largest core modules (`nfl_legends_benefits_brain.py` and `multi_agent_benefits_coordinator.py`) plus the full knowledge JSON exports were developed in the same session and live in the working artifacts directory.
-
-## Option A — Copy from the session artifacts (if you have access)
+## Quick start
 
 ```bash
-cp /path/to/artifacts/nfl_legends_benefits_brain.py .
-cp /path/to/artifacts/multi_agent_benefits_coordinator.py .
-cp /path/to/artifacts/benefits_knowledge.json .
-cp /path/to/artifacts/sample_coordination_package.json .
-git add .
-git commit -m "Add core brain and multi-agent coordinator"
-git push
-```
-
-## Option B — Ask the assistant to push them
-
-Reply with: **Push the remaining core modules** and the assistant will upload `nfl_legends_benefits_brain.py` and `multi_agent_benefits_coordinator.py` via the GitHub API.
-
-## What is already working on GitHub
-
-- `app.py` — Streamlit UI
-- `llm_client.py` — Mock / xAI / OpenAI client
-- `run_app.sh` — launcher
-- `requirements.txt`
-- `README.md` + `README_Benefits_Brain.md`
-- `.gitignore`
-
-Once the two core modules are present you can run:
-
-```bash
+git clone https://github.com/emaillp77/nfl-legends-benefits-brain.git
+cd nfl-legends-benefits-brain
 pip install -r requirements.txt
+
+# CLI demo
+python multi_agent_benefits_coordinator.py
+
+# Web UI
 streamlit run app.py
+# or
+./run_app.sh
 ```
+
+## Optional LLM explanations
+
+```bash
+export XAI_API_KEY="your-key"   # or OPENAI_API_KEY
+python multi_agent_benefits_coordinator.py
+```
+
+Without a key, the MockLLMClient provides offline plain-language summaries.
+
+## Project layout
+
+| File | Role |
+|------|------|
+| `nfl_legends_benefits_brain.py` | Knowledge base + eligibility rules |
+| `multi_agent_benefits_coordinator.py` | Multi-agent pipeline |
+| `llm_client.py` | Mock / xAI / OpenAI client |
+| `app.py` | Streamlit UI |
+| `benefits_knowledge.json` | Exported knowledge (21 benefits) |
+| `sample_coordination_package.json` | Example Case Package |
+| `run_app.sh` | Launcher |
+| `requirements.txt` | Dependencies |
+
+## Disclaimer
+
+Educational / reference tool only. Always verify eligibility, amounts, and procedures with official NFL Player Benefits sources, plan SPDs, and the current CBA.
