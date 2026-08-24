@@ -1,3 +1,142 @@
 {
-  "_note": "Placeholder. Replace with sample_coordination_package.json from the development session for a full multi-agent output example."
+  "case_id": "case-20260824-011049",
+  "player": {
+    "name": "Marcus 'Tank' Reynolds",
+    "credited_seasons": 7,
+    "is_vested": true,
+    "age": 39,
+    "years_since_last_active": 7
+  },
+  "intent": "explore",
+  "status": "completed",
+  "summary": {
+    "benefits_reviewed": 8,
+    "eligible_count": 7,
+    "cautions_count": 5,
+    "priority_actions": 7
+  },
+  "priority_actions": [
+    {
+      "step": 1,
+      "benefit": "Severance Plan",
+      "action": "Payment is automatic if eligible.",
+      "contacts": ["800.635.4625 (prompt 1)", "NFLPlayerBenefits.com"]
+    },
+    {
+      "step": 2,
+      "benefit": "NFL Player Insurance Plan — Continuing Veteran (CV)",
+      "action": "Coverage is automatic for eligible players.",
+      "contacts": ["800.635.9671", "myCigna.com"]
+    },
+    {
+      "step": 3,
+      "benefit": "Pension Plan",
+      "action": "Apply via NFLPlayerBenefits.com or call.",
+      "contacts": ["800.638.3186 (prompt 3)", "NFLPlayerBenefits.com"]
+    },
+    {
+      "step": 4,
+      "benefit": "Health Reimbursement Account (HRA) Plan",
+      "action": "Use for qualified health expenses.",
+      "contacts": ["800.501.7633", "NFLPlayerBenefits.com"]
+    },
+    {
+      "step": 5,
+      "benefit": "Former Player Life-Improvement Plan (FPLIP)",
+      "action": "Discount Rx: available at participating pharmacies.",
+      "contacts": ["800.635.4625 (prompt 1)", "NFLPlayerBenefits.com"]
+    },
+    {
+      "step": 6,
+      "benefit": "NFL Total Wellness",
+      "action": "Email TotalWellness@nfl.com for training registration, Headspace, retreats, coaches.",
+      "contacts": ["TotalWellness@nfl.com", "800.506.0078 (Life Line)"]
+    },
+    {
+      "step": 7,
+      "benefit": "Players Community Portal & App + NFL Player Benefits App",
+      "action": "players.nfl.com — create account or sign in.",
+      "contacts": ["players.community@nfl.com", "NFLPlayerBenefits.com"]
+    }
+  ],
+  "eligible_benefits": [
+    {
+      "id": "severance",
+      "name": "Severance Plan",
+      "value": "$30,000–$50,000 per year for 2020–2030 (depends on seasons earned)",
+      "next_action": "Payment is automatic if eligible.",
+      "contacts": ["800.635.4625 (prompt 1)", "NFLPlayerBenefits.com"]
+    },
+    {
+      "id": "cv_coverage",
+      "name": "NFL Player Insurance Plan — Continuing Veteran (CV)",
+      "value": null,
+      "next_action": "Coverage is automatic for eligible players.",
+      "contacts": ["800.635.9671", "myCigna.com"]
+    },
+    {
+      "id": "pension",
+      "name": "Pension Plan",
+      "value": "Increased to $600 per Credited Season for seasons prior to 2012 (eff. Apr 1, 2025); post-2011 seasons +10% under 2020 CBA.",
+      "next_action": "Apply via NFLPlayerBenefits.com or call.",
+      "contacts": ["800.638.3186 (prompt 3)", "NFLPlayerBenefits.com"]
+    },
+    {
+      "id": "hra",
+      "name": "Health Reimbursement Account (HRA) Plan",
+      "value": null,
+      "next_action": "Use for qualified health expenses.",
+      "contacts": ["800.501.7633", "NFLPlayerBenefits.com"]
+    },
+    {
+      "id": "fplip",
+      "name": "Former Player Life-Improvement Plan (FPLIP)",
+      "value": null,
+      "next_action": "Discount Rx: available at participating pharmacies.",
+      "contacts": ["800.635.4625 (prompt 1)", "NFLPlayerBenefits.com"]
+    },
+    {
+      "id": "total_wellness",
+      "name": "NFL Total Wellness",
+      "value": null,
+      "next_action": "Email TotalWellness@nfl.com for training registration, Headspace, retreats, coaches.",
+      "contacts": ["TotalWellness@nfl.com", "800.506.0078 (Life Line)"]
+    },
+    {
+      "id": "portal",
+      "name": "Players Community Portal & App + NFL Player Benefits App",
+      "value": null,
+      "next_action": "players.nfl.com — create account or sign in.",
+      "contacts": ["players.community@nfl.com", "NFLPlayerBenefits.com"]
+    }
+  ],
+  "cautions": [
+    {
+      "severity": "info",
+      "benefit_id": "pension",
+      "message": "Player age 39. Pension payable as early as 55; deferring to 65 increases monthly amount."
+    },
+    {
+      "severity": "medium",
+      "benefit_id": "tuition",
+      "message": "Tuition Assistance window is typically within ~72 months of last game. Confirm exact Plan Year rules."
+    },
+    {
+      "severity": "medium",
+      "benefit_id": "severance",
+      "message": "Address must be current; otherwise payment may be delayed or lost."
+    },
+    {
+      "severity": "medium",
+      "benefit_id": "pension",
+      "message": "Application timing matters relative to other disability benefits."
+    },
+    {
+      "severity": "medium",
+      "benefit_id": "fplip",
+      "message": "Life insurance ends at age 55 or pension start."
+    }
+  ],
+  "explanation_provider": "MockLLMClient",
+  "disclaimer": "Educational tool only. Verify all eligibility, amounts, and procedures with official NFL Player Benefits sources, plan SPDs, and the current CBA."
 }
